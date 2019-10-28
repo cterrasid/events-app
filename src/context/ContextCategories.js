@@ -4,11 +4,11 @@ import axios from 'axios';
 //Crear el context
 const ContextCategories = React.createContext();
 
-//Exportar el Consumer
+//Exportar el Consumer (se importará en cualquier parte donde se quiera acceder a los datos)
 export const ConsumerCategories = ContextCategories.Consumer;
 
 class ProviderCategories extends Component {
-	token = 'LZB65BYVIO4435B6STTS';
+    token = 'LZB65BYVIO4435B6STTS';
 
 	state = { categories: [] };
 
