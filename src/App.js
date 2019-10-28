@@ -1,11 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import Header from './components/Header';
+import Form from './components/Form';
+import ProviderCategories from './context/ContextCategories';
 
 function App() {
 	return (
-		<Fragment>
+		<ProviderCategories>
 			<Header />
-		</Fragment>
+			<div className="uk-container">
+				<Form />
+			</div>
+		</ProviderCategories>
 	);
 }
 
