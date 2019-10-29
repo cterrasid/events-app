@@ -8,7 +8,6 @@ const ContextCategories = React.createContext();
 export const ConsumerCategories = ContextCategories.Consumer;
 
 class ProviderCategories extends Component {
-    token = 'LZB65BYVIO4435B6STTS';
 
 	state = { categories: [] };
 
@@ -17,7 +16,7 @@ class ProviderCategories extends Component {
 	}
 
 	getCategories = async () => {
-		let url = `https://www.eventbriteapi.com/v3/categories/?token=${this.token}`;
+		let url = `https://www.eventbriteapi.com/v3/categories/?token=${process.env.REACT_APP_API_KEY}`;
 
 		let categories = await axios.get(url);
 
