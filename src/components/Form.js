@@ -6,6 +6,14 @@ class Form extends Component {
 		name: '',
 		category: '',
 	};
+
+	//Si el usuario agrega un evento o categoria
+	getEventsData = e => {
+		this.setState({
+			[e.target.name]: e.target.value,
+		});
+	};
+
 	render() {
 		return (
 			<form>
@@ -14,10 +22,16 @@ class Form extends Component {
 				</fieldset>
 				<div className="uk-column-1-3@m uk-margin">
 					<div className="uk-margin" uk-margin="true">
-						<input name="name" className="uk-input" placeholder="Event or city name" />
+						<input
+							name="name"
+							className="uk-input"
+							placeholder="Event or city name"
+							onChange={this.getEventsData}
+						/>
 					</div>
 					<div className="uk-margin" uk-margin="true">
-						<select name="category" className="uk-select">
+						<select name="category" className="uk-select" onChange={this.getEventsData}>
+                            <option value="">--Choose a category--</option>
 							<ConsumerCategories>
 								{/* Dentro del consumer se tiene acceso a los datos */}
 								{value => {
