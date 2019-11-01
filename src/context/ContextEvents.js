@@ -17,15 +17,18 @@ class ProviderEvents extends Component {
 
 		//consultar la API con la url
 		const events = await axios(url);
-		console.log(events);
+
+		this.setState({
+			events: events.data.events,
+		});
 	};
 
 	render() {
 		return (
 			<ContextEvents.Provider
 				value={{
-                    events: this.state.events,
-                    getEvents: this.getEvents
+					events: this.state.events,
+					getEvents: this.getEvents,
 				}}
 			>
 				{this.props.children}
