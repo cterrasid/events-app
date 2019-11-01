@@ -22,3 +22,9 @@ h1 {
   width: 100%;
   background-color: #ec3a49;
 }
+
+.description{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}

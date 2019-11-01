@@ -20,7 +20,9 @@ const Event = ({ event }) => {
 				</div>
 				<div className="uk-card-body">
 					<h3 className="uk-card-title">{event.name.text}</h3>
+                    <p className="description">
 					{text}
+                    </p>
 				</div>
 				<div className="uk-card-footer">
 					<a
