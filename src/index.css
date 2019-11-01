@@ -1,6 +1,7 @@
 html {
   height: 100%;
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -14,10 +15,12 @@ header {
   color: white;
   padding: 5rem 0;
 }
+
 h1 {
   color: white;
   font-weight: 900;
 }
+
 .uk-button {
   width: 100%;
   background-color: #ec3a49;
